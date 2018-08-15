@@ -1,6 +1,7 @@
 package com.example.faas.common;
 
 import java.util.Map;
+import java.util.Properties;
 import java.util.concurrent.Callable;
 
 public interface Function<V> extends Callable<V>{
@@ -9,5 +10,5 @@ public interface Function<V> extends Callable<V>{
 
 	void setJobParams(Map<String, String> params);
 	
-	void setStaticConfig(Map<String, String> config);
+	void setStaticConfig(Properties config);
 }

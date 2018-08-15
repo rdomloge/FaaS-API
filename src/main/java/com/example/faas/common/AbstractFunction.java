@@ -1,12 +1,13 @@
 package com.example.faas.common;
 
 import java.util.Map;
+import java.util.Properties;
 
 public abstract class AbstractFunction<V> implements Function<V> {
 
 	protected Map<String, String> params;
 	
-	protected Map<String, String> config;
+	protected Properties config;
 	
 	@Override
 	public void setJobParams(Map<String, String> params) {
@@ -14,7 +15,7 @@ public abstract class AbstractFunction<V> implements Function<V> {
 	}
 
 	@Override
-	public void setStaticConfig(Map<String, String> config) {
+	public void setStaticConfig(Properties config) {
 		this.config = config;
 	}
 
